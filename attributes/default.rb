@@ -7,6 +7,6 @@ when "windows"
   when /i[3-6]86/
     default['hg']['windows_arch'] = "x86"
   end
-  default['hg']['version'] = "3.8.3"
+  default['hg']['version'] = ''
   default['hg']['windows_url'] = "http://www.mercurial-scm.org/release/windows/mercurial-#{node['hg']['version']}-#{node['hg']['windows_arch']}.msi"
 end
