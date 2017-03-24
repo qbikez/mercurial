@@ -5,7 +5,7 @@ end
 def hg_connection_command
   case node['platform']
   when "windows"
-    cmd = ""
+    cmd = "--ssh 'ssh -i #{new_resource.key} -o StrictHostKeyChecking=no'"
   else
     cmd = "--ssh 'ssh -i #{new_resource.key} -o StrictHostKeyChecking=no'"
   end
